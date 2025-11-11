@@ -1,8 +1,3 @@
-/* Hide scrollbar globally when loader is active */
-body:has(.loader-container) {
-  overflow: hidden !important;
-}
-
 /* Truck Loader Styles */
 .loader-container {
   position: fixed;

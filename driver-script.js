@@ -15,12 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function hideLoader() {
     const loader = document.getElementById('pageLoader');
     if (loader) {
+        // Prevent scrolling during loader
+        document.body.style.overflow = 'hidden';
+        
         // Wait a bit to show the animation
         setTimeout(() => {
             loader.classList.add('hidden');
             // Remove from DOM after transition
             setTimeout(() => {
                 loader.style.display = 'none';
+                // Re-enable scrolling after loader disappears
+                document.body.style.overflow = '';
             }, 500);
         }, 3000); // Show loader for 3 seconds
     }
