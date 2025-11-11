@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eyes Following Mouse Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .eye-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eye-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: transform 0.6s ease;
+    }
+
+    .eye-card:hover::before {
+      transform: rotate(45deg) translate(50%, 50%);
+    }
+
+    .eyes-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0 2rem;
+    }
+
+    .eye {
+      width: 80px;
+      height: 80px;
+      background: #f8f9fa;
+      border-radius: 50%;
+      position: relative;
+      border: 3px solid #e9ecef;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.1s ease;
+    }
+
+    .eye:hover {
+      transform: scale(1.05);
+    }
+
+    .pupil {
+      width: 32px;
+      height: 32px;
+      background: radial-gradient(circle at 30% 30%, #4a5568, #1a202c);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.1s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .pupil::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      top: 6px;
+      left: 8px;
+      opacity: 0.8;
+    }
+
+    .card-content h2 {
+      margin: 0 0 1rem;
+      color: #2d3748;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .card-content p {
+      color: #718096;
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+    }
+
+    .card-button {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 1rem;
+    }
+
+    .card-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .card-button:active {
+      transform: translateY(0);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .eye-card {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+      
+      .eyes-container {
+        gap: 1.5rem;
+      }
+      
+      .eye {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .pupil {
+        width: 24px;
+        height: 24px;
+      }
+      
+      .pupil::after {
+        width: 6px;
+        height: 6px;
+        top: 4px;
+        left: 6px;
+      }
+      
+      .card-content h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Blink animation */
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+
+    .eye.blink {
+      animation: blink 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="eye-card">
+    <div class="eyes-container">
+      <div class="eye" id="leftEye">
+        <div class="pupil" id="leftPupil"></div>
+      </div>
+      <div class="eye" id="rightEye">
+        <div class="pupil" id="rightPupil"></div>
+      </div>
+    </div>
+    
+    <div class="card-content">
+      <h2>👀 I'm Watching You!</h2>
+      <p>Move your mouse around and watch my eyes follow your every move. This responsive card demonstrates smooth eye tracking with CSS transforms and JavaScript.</p>
+      <button class="card-button" onclick="blinkEyes()">Make Me Blink!</button>
+    </div>
+  </div>
+
+  <script>
+    const leftPupil = document.getElementById('leftPupil');
+    const rightPupil = document.getElementById('rightPupil');
+    const leftEye = document.getElementById('leftEye');
+    const rightEye = document.getElementById('rightEye');
+
+    // Maximum distance pupils can move from center
+    const maxMove = 20;
+
+    function updateEyePosition(mouseX, mouseY) {
+      // Get eye positions
+      const leftEyeRect = leftEye.getBoundingClientRect();
+      const rightEyeRect = rightEye.getBoundingClientRect();
+      
+      const leftEyeCenterX = leftEyeRect.left + leftEyeRect.width / 2;
+      const leftEyeCenterY = leftEyeRect.top + leftEyeRect.height / 2;
+      
+      const rightEyeCenterX = rightEyeRect.left + rightEyeRect.width / 2;
+      const rightEyeCenterY = rightEyeRect.top + rightEyeRect.height / 2;
+
+      // Calculate angles and distances for left eye
+      const leftAngle = Math.atan2(mouseY - leftEyeCenterY, mouseX - leftEyeCenterX);
+      const leftDistance = Math.min(maxMove, Math.hypot(mouseX - leftEyeCenterX, mouseY - leftEyeCenterY) / 10);
+      
+      const leftMoveX = Math.cos(leftAngle) * leftDistance;
+      const leftMoveY = Math.sin(leftAngle) * leftDistance;
+
+      // Calculate angles and distances for right eye
+      const rightAngle = Math.atan2(mouseY - rightEyeCenterY, mouseX - rightEyeCenterX);
+      const rightDistance = Math.min(maxMove, Math.hypot(mouseX - rightEyeCenterX, mouseY - rightEyeCenterY) / 10);
+      
+      const rightMoveX = Math.cos(rightAngle) * rightDistance;
+      const rightMoveY = Math.sin(rightAngle) * rightDistance;
+
+      // Apply transforms
+      leftPupil.style.transform = `translate(calc(-50% + ${leftMoveX}px), calc(-50% + ${leftMoveY}px))`;
+      rightPupil.style.transform = `translate(calc(-50% + ${rightMoveX}px), calc(-50% + ${rightMoveY}px))`;
+    }
+
+    // Mouse move event
+    document.addEventListener('mousemove', (e) => {
+      updateEyePosition(e.clientX, e.clientY);
+    });
+
+    // Touch move event for mobile
+    document.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        updateEyePosition(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    });
+
+    // Blink function
+    function blinkEyes() {
+      leftEye.classList.add('blink');
+      rightEye.classList.add('blink');
+      
+      setTimeout(() => {
+        leftEye.classList.remove('blink');
+        rightEye.classList.remove('blink');
+      }, 300);
+    }
+
+    // Random blink every 3-7 seconds
+    function randomBlink() {
+      blinkEyes();
+      setTimeout(randomBlink, Math.random() * 4000 + 3000);
+    }
+
+    // Start random blinking after 2 seconds
+    setTimeout(randomBlink, 2000);
+
+    // Initialize eye position
+    updateEyePosition(window.innerWidth / 2, window.innerHeight / 2);
+  </script>
+</body>
+</html>

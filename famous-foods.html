@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أشهر الأكلات المصرية - Famous Egyptian Foods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="driver-styles.css">
+    <style>
+        :root {
+            --primary-yellow: #F5C842;
+            --light-yellow: #FFF4D6;
+            --dark-text: #333333;
+            --light-text: #666666;
+            --gray-bg: #F8F9FA;
+            --white: #FFFFFF;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--gray-bg);
+            color: var(--dark-text);
+        }
+
+        .foods-page {
+            min-height: 100vh;
+            background-color: var(--gray-bg);
+            padding: 2rem 0;
+        }
+
+        .foods-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .foods-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            color: var(--primary-yellow);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .foods-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: var(--white);
+            color: var(--dark-text);
+            border: 1px solid #ddd;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* Categories Navigation */
+        .categories-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--white);
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        .category-item:hover, .category-item.active {
+            background: var(--primary-yellow);
+            transform: translateY(-2px);
+        }
+
+        .category-item i {
+            font-size: 1.2rem;
+        }
+
+        /* Featured Item */
+        .featured-section {
+            margin-bottom: 3rem;
+        }
+
+        .featured-item {
+            background: var(--primary-yellow);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            box-shadow: 0 10px 30px var(--shadow);
+            max-width: 400px;
+        }
+
+        .featured-image {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .featured-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        .featured-weight {
+            color: var(--dark-text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .featured-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .qty-btn {
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--dark-text);
+            background: transparent;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .qty-input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .add-btn {
+            width: 35px;
+            height: 35px;
+            background: var(--dark-text);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* Regular Grid */
+        .foods-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .food-item {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .food-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow);
+        }
+
+        .food-image {
+            height: 180px;
+            background: var(--gray-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .food-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .food-placeholder {
+            font-size: 3rem;
+            color: var(--light-text);
+        }
+
+        .food-info {
+            padding: 1.2rem;
+        }
+
+        .food-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--dark-text);
+        }
+
+        .food-weight {
+            color: var(--light-text);
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .food-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-yellow);
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            padding: 0.3rem;
+            box-shadow: 0 2px 10px var(--shadow);
+            z-index: 1000;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--dark-text);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-yellow);
+            color: var(--dark-text);
+        }
+
+        .lang-btn:hover {
+            background: var(--light-yellow);
+        }
+
+        .show-more {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .show-more-btn {
+            background: var(--white);
+            border: 1px solid #ddd;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            color: var(--dark-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .show-more-btn:hover {
+            background: var(--primary-yellow);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .foods-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .featured-item {
+                flex-direction: column;
+                text-align: center;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .foods-header h1 {
+                font-size: 2rem;
+            }
+            
+            .foods-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .categories-nav {
+                gap: 1rem;
+            }
+            
+            .category-item {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .lang-toggle {
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .foods-container {
+                padding: 0 1rem;
+            }
+
+            .featured-item {
+                padding: 1.5rem;
+            }
+
+            .featured-image {
+                width: 100px;
+                height: 100px;
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .foods-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="foods-page">
+        <!-- Back Button -->
+        <a href="driver-comparison.html" class="back-button">
+            <i class="fas fa-arrow-right"></i>
+            <span data-en="Back to Main" data-ar="العودة للرئيسية">العودة للرئيسية</span>
+        </a>
+
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="toggleLanguage('ar')">عربي</button>
+            <button class="lang-btn" onclick="toggleLanguage('en')">English</button>
+        </div>
+
+        <div class="foods-container">
+            <!-- Header -->
+            <div class="foods-header">
+                <div class="section-subtitle" data-en="OUR MENU" data-ar="قائمة طعامنا">قائمة طعامنا</div>
+                <h1 data-en="The Most Popular" data-ar="الأكثر شعبية">الأكثر شعبية</h1>
+            </div>
+
+            <!-- Categories Navigation -->
+            <div class="categories-nav">
+                <a href="#" class="category-item active" data-en="Main Dishes" data-ar="الأطباق الرئيسية">
+                    <i class="fas fa-utensils"></i>
+                    <span data-en="Main Dishes" data-ar="الأطباق الرئيسية">الأطباق الرئيسية</span>
+                </a>
+                <a href="#" class="category-item" data-en="Breakfast" data-ar="الإفطار">
+                    <i class="fas fa-coffee"></i>
+                    <span data-en="Breakfast" data-ar="الإفطار">الإفطار</span>
+                </a>
+                <a href="#" class="category-item" data-en="Soups" data-ar="الشوربات">
+                    <i class="fas fa-bowl-food"></i>
+                    <span data-en="Soups" data-ar="الشوربات">الشوربات</span>
+                </a>
+                <a href="#" class="category-item" data-en="Desserts" data-ar="الحلويات">
+                    <i class="fas fa-ice-cream"></i>
+                    <span data-en="Desserts" data-ar="الحلويات">الحلويات</span>
+                </a>
+            </div>
+
+            <!-- Featured Item -->
+            <div class="featured-section">
+                <div class="featured-item">
+                    <div class="featured-image">
+                        🍚🍝🍅
+                    </div>
+                    <div class="featured-info">
+                        <h3 data-en="Koshari Royal" data-ar="كشري رويال">كشري رويال</h3>
+                        <div class="featured-weight" data-en="250 g" data-ar="250 جم">250 جم</div>
+                        <div class="featured-price" data-en="$3.50" data-ar="35 جنيه">35 جنيه</div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn">-</button>
+                            <input type="number" value="1" class="qty-input">
+                            <button class="qty-btn">+</button>
+                            <button class="add-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foods Grid -->
+            <div class="foods-grid">
+                <!-- Food Item 1: Ful Medames -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Ful Medames" data-ar="فول مدمس">فول مدمس</h3>
+                        <div class="food-weight" data-en="200 g" data-ar="200 جم">200 جم</div>
+                        <div class="food-price" data-en="$2.50" data-ar="25 جنيه">25 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 2: Molokhia -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Molokhia" data-ar="ملوخية">ملوخية</h3>
+                        <div class="food-weight" data-en="300 g" data-ar="300 جم">300 جم</div>
+                        <div class="food-price" data-en="$4.00" data-ar="40 جنيه">40 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 3: Mahshi -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Mahshi" data-ar="محشي">محشي</h3>
+                        <div class="food-weight" data-en="250 g" data-ar="250 جم">250 جم</div>
+                        <div class="food-price" data-en="$3.50" data-ar="35 جنيه">35 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 4: Ta'meya -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-circle" style="color: #8B4513;"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Ta'meya" data-ar="طعمية">طعمية</h3>
+                        <div class="food-weight" data-en="150 g" data-ar="150 جم">150 جم</div>
+                        <div class="food-price" data-en="$2.00" data-ar="20 جنيه">20 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 5: Roz Bel Laban -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-ice-cream"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Roz Bel Laban" data-ar="رز بلبن">رز بلبن</h3>
+                        <div class="food-weight" data-en="180 g" data-ar="180 جم">180 جم</div>
+                        <div class="food-price" data-en="$2.50" data-ar="25 جنيه">25 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 6: Chicken Shawarma -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Chicken Shawarma" data-ar="شاورما فراخ">شاورما فراخ</h3>
+                        <div class="food-weight" data-en="220 g" data-ar="220 جم">220 جم</div>
+                        <div class="food-price" data-en="$4.50" data-ar="45 جنيه">45 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 7: Feteer -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Feteer" data-ar="فطير">فطير</h3>
+                        <div class="food-weight" data-en="200 g" data-ar="200 جم">200 جم</div>
+                        <div class="food-price" data-en="$3.00" data-ar="30 جنيه">30 جنيه</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 8: Kofta -->
+                <div class="food-item">
+                    <div class="food-image">
+                        <div class="food-placeholder">
+                            <i class="fas fa-hamburger"></i>
+                        </div>
+                    </div>
+                    <div class="food-info">
+                        <h3 data-en="Kofta" data-ar="كفتة">كفتة</h3>
+                        <div class="food-weight" data-ar="300 جم" data-en="300 g">300 جم</div>
+                        <div class="food-price" data-en="$5.00" data-ar="50 جنيه">50 جنيه</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Show More Button -->
+            <div class="show-more">
+                <a href="#" class="show-more-btn" data-en="Show more" data-ar="عرض المزيد">عرض المزيد</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'ar';
+
+        function toggleLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update text content
+            document.querySelectorAll('[data-ar]').forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.getAttribute('data-ar');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            // Update document direction
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        }
+
+        // Initialize with Arabic
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleLanguage('ar');
+        });
+    </script>
+</body>
+</html>

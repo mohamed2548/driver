@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Cairo Drivers - Top Professional Drivers" data-ar="سائقو القاهرة - أفضل السائقين المحترفين">Cairo Drivers - Top Professional Drivers</title>
+    <meta name="description" content="Top picks and book the top 4 professional drivers in Cairo, Egypt. Premium transportation services with experienced drivers.">
+    
+    <!-- External Resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="driver-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-car"></i>
+                <span data-en="Cairo Drivers" data-ar="سائقو القاهرة">Cairo Drivers</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-en="Pages" data-ar="صفحات" onclick="toggleDropdown(event)">
+                        Pages
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="openModal('signinModal')" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</a>
+                        <a href="#" onclick="openModal('signupModal')" data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</a>
+                        <a href="#author" data-en="Author Page" data-ar="صفحة المؤلف">Author Page</a>
+                        <a href="#attractions" data-en="Top Attractions" data-ar="أهم المعالم">Top Attractions</a>
+                        <a href="famous-foods.html" data-en="Famous Foods" data-ar="أشهر الأكلات">Famous Foods</a>
+                    </div>
+                </div>
+                <a href="#contact" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
+                <a href="#testimonials" data-en="Reviews" data-ar="التقييمات">Reviews</a>
+                <a href="#comparison" data-en="Top Picks" data-ar="الأفضل">Top Picks</a>
+                <a href="#drivers" data-en="Drivers" data-ar="السائقون">Drivers</a>
+                <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+            </nav>
+            
+            <div class="header-controls">
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <span class="dark-mode-text" data-en="Dark" data-ar="ليلي">Dark</span>
+                </button>
+                <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle Language">
+                    <i class="fas fa-globe"></i>
+                    <span class="lang-text">العربية</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <!-- Slideshow Background -->
+        <div class="slideshow-background">
+            <div class="slide active">
+                <img src="videos/1..jpg" alt="Background Image">
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/5.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/6.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video muted loop>
+                    <source src="videos/7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        
+        <!-- Overlay for better text readability -->
+        <div class="about-overlay"></div>
+        
+        <div class="container">
+            <h2 data-en="About Us" data-ar="من نحن">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="Welcome to Cairo Drivers, your trusted partner for premium transportation services in Egypt's vibrant capital. With years of experience serving both locals and international visitors, we pride ourselves on delivering exceptional service that combines safety, comfort, and local expertise." data-ar="مرحباً بكم في سائقو القاهرة، شريككم الموثوق لخدمات النقل المتميزة في عاصمة مصر النابضة. مع سنوات من الخبرة في خدمة المحليين والزوار الدوليين، نفخر بتقديم خدمة استثنائية تجمع بين الأمان والراحة والخبرة المحلية.">Welcome to Cairo Drivers, your trusted partner for premium transportation services in Egypt's vibrant capital. With years of experience serving both locals and international visitors, we pride ourselves on delivering exceptional service that combines safety, comfort, and local expertise.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 data-en="Safety First" data-ar="الأمان أولاً">Safety First</h4>
+                            <p data-en="All our drivers are licensed, insured, and undergo regular safety training" data-ar="جميع سائقينا مرخصون ومؤمنون ويخضعون لتدريب أمان منتظم">All our drivers are licensed, insured, and undergo regular safety training</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <h4 data-en="24/7 Service" data-ar="خدمة 24/7">24/7 Service</h4>
+                            <p data-en="Available round the clock for all your transportation needs" data-ar="متاحون على مدار الساعة لجميع احتياجاتكم في النقل">Available round the clock for all your transportation needs</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <h4 data-en="Premium Quality" data-ar="جودة متميزة">Premium Quality</h4>
+                            <p data-en="Modern vehicles and professional service for the best experience" data-ar="مركبات حديثة وخدمة محترفة لأفضل تجربة">Modern vehicles and professional service for the best experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-en="Top 4 Professional Drivers in Cairo" data-ar="أفضل 4 سائقين محترفين في القاهرة">Top 4 Professional Drivers in Cairo</h1>
+                <p data-en="Experience premium transportation services with Cairo's most trusted and experienced drivers. Professional, reliable, and safe rides across the city." data-ar="استمتع بخدمات النقل المميزة مع أكثر السائقين ثقة وخبرة في القاهرة. رحلات محترفة وموثوقة وآمنة في جميع أنحاء المدينة.">Experience premium transportation services with Cairo's most trusted and experienced drivers. Professional, reliable, and safe rides across the city.</p>
+                <a href="#drivers" class="cta-button" data-en="View Drivers" data-ar="عرض السائقين">View Drivers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drivers Section -->
+    <section id="drivers" class="drivers-section">
+        <div class="container">
+            <h2 data-en="Meet Our Professional Drivers" data-ar="تعرف على سائقينا المحترفين">Meet Our Professional Drivers</h2>
+            
+            <div class="drivers-grid">
+                <!-- Driver 1: Shady Zidan -->
+                <div class="driver-card">
+                    <div class="driver-image">
+                        <img src="shady zidan.jpg" alt="Shady Zidan" loading="lazy">
+                        <div class="driver-badge">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="driver-info">
+                        <h3 data-en="Shady Zidan" data-ar="شادي زيدان">Shady Zidan</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text" data-en="4.7/5 (203 reviews)" data-ar="4.7/5 (203 تقييم)">4.7/5 (203 reviews)</span>
+                        </div>
+                        <p class="driver-bio" data-en="Professional driver with 8 years of experience in Cairo. Specializes in airport transfers and business trips. Known for punctuality and excellent customer service." data-ar="سائق محترف مع 8 سنوات من الخبرة في القاهرة. متخصص في نقل المطار والرحلات التجارية. معروف بالالتزام بالمواعيد وخدمة العملاء الممتازة.">Professional driver with 8 years of experience in Cairo. Specializes in airport transfers and business trips. Known for punctuality and excellent customer service.</p>
+                        <div class="driver-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-en="8 Years Experience" data-ar="8 سنوات خبرة">8 Years Experience</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span data-en="Toyota Camry 2022" data-ar="تويوتا كامري 2022">Toyota Camry 2022</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-en="All Cairo Areas" data-ar="جميع مناطق القاهرة">All Cairo Areas</span>
+                            </div>
+                        </div>
+                        <div class="driver-actions">
+                            <button class="driver-info-btn" onclick="window.location.href='shady-zidan-profile.html'" data-en="Driver Info" data-ar="معلومات السائق">
+                                <i class="fas fa-user-circle"></i>
+                                <span data-en="Driver Info" data-ar="معلومات السائق">Driver Info</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Driver 2: Ibrahim Zidan -->
+                <div class="driver-card">
+                    <div class="driver-image">
+                        <img src="ibrahim zidan.jpg" alt="Ibrahim Zidan" loading="lazy">
+                        <div class="driver-badge">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="driver-info">
+                        <h3 data-en="Ibrahim Zidan" data-ar="إبراهيم زيدان">Ibrahim Zidan</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text" data-en="4.7/5 (203 reviews)" data-ar="4.7/5 (203 تقييم)">4.7/5 (203 reviews)</span>
+                        </div>
+                        <p class="driver-bio" data-en="Experienced driver with 15 years serving Cairo's elite. Expert in luxury transportation and VIP services. Fluent in English and Arabic." data-ar="سائق خبير مع 15 سنة في خدمة نخبة القاهرة. خبير في النقل الفاخر وخدمات كبار الشخصيات. يتحدث الإنجليزية والعربية بطلاقة.">Experienced driver with 15 years serving Cairo's elite. Expert in luxury transportation and VIP services. Fluent in English and Arabic.</p>
+                        <div class="driver-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-en="15 Years Experience" data-ar="15 سنة خبرة">15 Years Experience</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span data-en="Honda Accord 2023" data-ar="هوندا أكورد 2023">Honda Accord 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-en="Greater Cairo" data-ar="القاهرة الكبرى">Greater Cairo</span>
+                            </div>
+                        </div>
+                        <div class="driver-actions">
+                            <button class="driver-info-btn" onclick="window.location.href='ibrahim-zidan-profile.html'" data-en="Driver Info" data-ar="معلومات السائق">
+                                <i class="fas fa-user-circle"></i>
+                                <span data-en="Driver Info" data-ar="معلومات السائق">Driver Info</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Driver 3: Amr El-Sawaq -->
+                <div class="driver-card">
+                    <div class="driver-image">
+                        <img src="amr elsawaq.jpg" alt="Amr El-Sawaq" loading="lazy">
+                        <div class="driver-badge">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="driver-info">
+                        <h3 data-en="Amr El-Sawaq" data-ar="عمرو السواق">Amr El-Sawaq</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text" data-en="4.7/5 (156 reviews)" data-ar="4.7/5 (156 تقييم)">4.7/5 (156 reviews)</span>
+                        </div>
+                        <p class="driver-bio" data-en="Young and energetic driver with 8 years of experience. Specializes in city tours and modern transportation solutions. Tech-savvy with GPS expertise." data-ar="سائق شاب ونشيط مع 8 سنوات من الخبرة. متخصص في جولات المدينة وحلول النقل الحديثة. خبير في التكنولوجيا ونظام تحديد المواقع.">Young and energetic driver with 8 years of experience. Specializes in city tours and modern transportation solutions. Tech-savvy with GPS expertise.</p>
+                        <div class="driver-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-en="8 Years Experience" data-ar="8 سنوات خبرة">8 Years Experience</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span data-en="BMW 3 Series 2023" data-ar="بي إم دبليو 3 سيريز 2023">BMW 3 Series 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-en="Cairo & Giza" data-ar="القاهرة والجيزة">Cairo & Giza</span>
+                            </div>
+                        </div>
+                        <div class="driver-actions">
+                            <button class="driver-info-btn" onclick="window.location.href='amr-elsawaq-profile.html'" data-en="Driver Info" data-ar="معلومات السائق">
+                                <i class="fas fa-user-circle"></i>
+                                <span data-en="Driver Info" data-ar="معلومات السائق">Driver Info</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Driver 4: Mahmoud Elsawaq -->
+                <div class="driver-card">
+                    <div class="driver-image">
+                        <img src="mahmoud elsawaq.jpg" alt="Mahmoud Elsawaq" loading="lazy">
+                        <div class="driver-badge">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="driver-info">
+                        <h3 data-en="Mahmoud Elsawaq" data-ar="محمود السواق">Mahmoud Elsawaq</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text" data-en="4.9/5 (312 reviews)" data-ar="4.9/5 (312 تقييم)">4.9/5 (312 reviews)</span>
+                        </div>
+                        <p class="driver-bio" data-en="Veteran driver with 20 years of experience in Cairo transportation. Master of all routes and traffic patterns. Exceptional safety record and customer loyalty." data-ar="سائق محنك مع 20 سنة من الخبرة في نقل القاهرة. خبير في جميع الطرق وأنماط المرور. سجل أمان استثنائي وولاء العملاء.">Veteran driver with 20 years of experience in Cairo transportation. Master of all routes and traffic patterns. Exceptional safety record and customer loyalty.</p>
+                        <div class="driver-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-en="20 Years Experience" data-ar="20 سنة خبرة">20 Years Experience</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span data-en="Hyundai Elantra 2022" data-ar="هيونداي إلانترا 2022">Hyundai Elantra 2022</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-en="All Egypt" data-ar="جميع أنحاء مصر">All Egypt</span>
+                            </div>
+                        </div>
+                        <div class="driver-actions">
+                            <button class="driver-info-btn" onclick="window.location.href='mahmoud-elsawaq-profile.html'" data-en="Driver Info" data-ar="معلومات السائق">
+                                <i class="fas fa-user-circle"></i>
+                                <span data-en="Driver Info" data-ar="معلومات السائق">Driver Info</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Picks Ranking Section -->
+    <section id="comparison" class="top-picks-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Top Picks - Drivers Ranking" data-ar="الأفضل - ترتيب السائقين">Top Picks - Drivers Ranking</h2>
+                <p data-en="Our drivers ranked by rating, experience, and customer satisfaction" data-ar="سائقونا مرتبون حسب التقييم والخبرة ورضا العملاء">Our drivers ranked by rating, experience, and customer satisfaction</p>
+            </div>
+            
+            <div class="ranking-list">
+                <!-- Rank 1: Mahmoud Elsawaq -->
+                <div class="ranking-item rank-1" data-driver="mahmoud">
+                    <div class="rank-badge">
+                        <div class="rank-number">1</div>
+                        <div class="crown-icon">👑</div>
+                    </div>
+                    <div class="driver-summary">
+                        <img src="mahmoud elsawaq.jpg" alt="Mahmoud Elsawaq" class="ranking-avatar">
+                        <div class="driver-info">
+                            <h3 data-en="Mahmoud Elsawaq" data-ar="محمود السواق">Mahmoud Elsawaq</h3>
+                            <div class="rating-display">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-score">4.9/5</span>
+                            </div>
+                            <div class="driver-highlights">
+                                <span class="highlight" data-en="20 Years Experience" data-ar="20 سنة خبرة">20 Years Experience</span>
+                                <span class="highlight" data-en="312 Happy Customers" data-ar="312 عميل راضي">312 Happy Customers</span>
+                                <span class="highlight" data-en="Veteran Expert" data-ar="خبير محنك">Veteran Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">4.9</div>
+                            <div class="stat-label" data-en="Rating" data-ar="التقييم">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">20</div>
+                            <div class="stat-label" data-en="Years" data-ar="سنة">Years</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">312</div>
+                            <div class="stat-label" data-en="Customers" data-ar="عميل">Customers</div>
+                        </div>
+                    </div>
+                    <a href="mahmoud-elsawaq-profile.html" class="view-profile-btn" data-en="View Profile" data-ar="عرض الملف الشخصي">View Profile</a>
+                </div>
+
+                <!-- Rank 2: Ibrahim Zidan -->
+                <div class="ranking-item rank-2" data-driver="ibrahim">
+                    <div class="rank-badge">
+                        <div class="rank-number">2</div>
+                        <div class="medal-icon">🥈</div>
+                    </div>
+                    <div class="driver-summary">
+                        <img src="ibrahim zidan.jpg" alt="Ibrahim Zidan" class="ranking-avatar">
+                        <div class="driver-info">
+                            <h3 data-en="Ibrahim Zidan" data-ar="إبراهيم زيدان">Ibrahim Zidan</h3>
+                            <div class="rating-display">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-score">4.8/5</span>
+                            </div>
+                            <div class="driver-highlights">
+                                <span class="highlight" data-en="15 Years Experience" data-ar="15 سنة خبرة">15 Years Experience</span>
+                                <span class="highlight" data-en="198 Happy Customers" data-ar="198 عميل راضي">198 Happy Customers</span>
+                                <span class="highlight" data-en="VIP Services" data-ar="خدمات مميزة">VIP Services</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">4.8</div>
+                            <div class="stat-label" data-en="Rating" data-ar="التقييم">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">15</div>
+                            <div class="stat-label" data-en="Years" data-ar="سنة">Years</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">198</div>
+                            <div class="stat-label" data-en="Customers" data-ar="عميل">Customers</div>
+                        </div>
+                    </div>
+                    <a href="ibrahim-zidan-profile.html" class="view-profile-btn" data-en="View Profile" data-ar="عرض الملف الشخصي">View Profile</a>
+                </div>
+
+                <!-- Rank 3: Shady Zidan -->
+                <div class="ranking-item rank-3" data-driver="shady">
+                    <div class="rank-badge">
+                        <div class="rank-number">3</div>
+                        <div class="medal-icon">🥉</div>
+                    </div>
+                    <div class="driver-summary">
+                        <img src="shady zidan.jpg" alt="Shady Zidan" class="ranking-avatar">
+                        <div class="driver-info">
+                            <h3 data-en="Shady Zidan" data-ar="شادي زيدان">Shady Zidan</h3>
+                            <div class="rating-display">
+                                <div class="stars">★★★★☆</div>
+                                <span class="rating-score">4.7/5</span>
+                            </div>
+                            <div class="driver-highlights">
+                                <span class="highlight" data-en="8 Years Experience" data-ar="8 سنوات خبرة">8 Years Experience</span>
+                                <span class="highlight" data-en="203 Happy Customers" data-ar="203 عميل راضي">203 Happy Customers</span>
+                                <span class="highlight" data-en="Airport Specialist" data-ar="متخصص المطار">Airport Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">4.7</div>
+                            <div class="stat-label" data-en="Rating" data-ar="التقييم">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label" data-en="Years" data-ar="سنة">Years</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">203</div>
+                            <div class="stat-label" data-en="Customers" data-ar="عميل">Customers</div>
+                        </div>
+                    </div>
+                    <a href="shady-zidan-profile.html" class="view-profile-btn" data-en="View Profile" data-ar="عرض الملف الشخصي">View Profile</a>
+                </div>
+
+                <!-- Rank 4: Amr El-Sawaq -->
+                <div class="ranking-item rank-4" data-driver="amr">
+                    <div class="rank-badge">
+                        <div class="rank-number">4</div>
+                        <div class="star-icon">⭐</div>
+                    </div>
+                    <div class="driver-summary">
+                        <img src="amr elsawaq.jpg" alt="Amr El-Sawaq" class="ranking-avatar">
+                        <div class="driver-info">
+                            <h3 data-en="Amr El-Sawaq" data-ar="عمرو السواق">Amr El-Sawaq</h3>
+                            <div class="rating-display">
+                                <div class="stars">★★★★☆</div>
+                                <span class="rating-score">4.7/5</span>
+                            </div>
+                            <div class="driver-highlights">
+                                <span class="highlight" data-en="8 Years Experience" data-ar="8 سنوات خبرة">8 Years Experience</span>
+                                <span class="highlight" data-en="156 Happy Customers" data-ar="156 عميل راضي">156 Happy Customers</span>
+                                <span class="highlight" data-en="Tech Expert" data-ar="خبير تقني">Tech Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">4.7</div>
+                            <div class="stat-label" data-en="Rating" data-ar="التقييم">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label" data-en="Years" data-ar="سنة">Years</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">156</div>
+                            <div class="stat-label" data-en="Customers" data-ar="عميل">Customers</div>
+                        </div>
+                    </div>
+                    <a href="amr-elsawaq-profile.html" class="view-profile-btn" data-en="View Profile" data-ar="عرض الملف الشخصي">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Customer Reviews & Testimonials" data-ar="تقييمات وآراء العملاء">Customer Reviews & Testimonials</h2>
+                <p data-en="What our satisfied customers say about our professional drivers" data-ar="ما يقوله عملاؤنا الراضون عن سائقينا المحترفين">What our satisfied customers say about our professional drivers</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="customer-details">
+                                <h4 data-en="Sarah Johnson" data-ar="سارة جونسون">Sarah Johnson</h4>
+                                <span class="customer-location" data-en="Tourist from USA" data-ar="سائحة من أمريكا">Tourist from USA</span>
+                            </div>
+                        </div>
+                        <div class="rating-stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-score">5.0</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p data-en="Mahmoud was absolutely fantastic! Professional, punctual, and knew all the best routes around Cairo. Made our vacation so much easier and enjoyable. Highly recommended!" data-ar="محمود كان رائعاً حقاً! محترف ودقيق في المواعيد ويعرف أفضل الطرق في القاهرة. جعل إجازتنا أسهل وأكثر متعة. أنصح به بشدة!">Mahmoud was absolutely fantastic! Professional, punctual, and knew all the best routes around Cairo. Made our vacation so much easier and enjoyable. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="driver-tag" data-en="Driver: Mahmoud Elsawaq" data-ar="السائق: محمود السواق">Driver: Mahmoud Elsawaq</span>
+                        <span class="date" data-en="December 2024" data-ar="ديسمبر 2024">December 2024</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="customer-details">
+                                <h4 data-en="Ahmed Mostafa" data-ar="أحمد مصطفى">Ahmed Mostafa</h4>
+                                <span class="customer-location" data-en="Business Executive" data-ar="مدير تنفيذي">Business Executive</span>
+                            </div>
+                        </div>
+                        <div class="rating-stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-score">4.8</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p data-en="Ibrahim provided excellent VIP service for my business meetings. Clean luxury vehicle, professional attitude, and always on time. Perfect for corporate transportation needs." data-ar="إبراهيم قدم خدمة مميزة ممتازة لاجتماعات عملي. سيارة فاخرة نظيفة، موقف محترف، ودائماً في الوقت المحدد. مثالي لاحتياجات النقل التجاري.">Ibrahim provided excellent VIP service for my business meetings. Clean luxury vehicle, professional attitude, and always on time. Perfect for corporate transportation needs.</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="driver-tag" data-en="Driver: Ibrahim Zidan" data-ar="السائق: إبراهيم زيدان">Driver: Ibrahim Zidan</span>
+                        <span class="date" data-en="November 2024" data-ar="نوفمبر 2024">November 2024</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="customer-details">
+                                <h4 data-en="Maria Rodriguez" data-ar="ماريا رودريجيز">Maria Rodriguez</h4>
+                                <span class="customer-location" data-en="International Visitor" data-ar="زائرة دولية">International Visitor</span>
+                            </div>
+                        </div>
+                        <div class="rating-stars">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p data-en="Shady was amazing for our airport transfers! He was waiting for us with a sign, helped with luggage, and gave us great tips about Cairo. Very friendly and reliable driver." data-ar="شادي كان رائعاً لنقلاتنا من وإلى المطار! كان ينتظرنا بلافتة، ساعدنا مع الأمتعة، وأعطانا نصائح رائعة عن القاهرة. سائق ودود وموثوق جداً.">Shady was amazing for our airport transfers! He was waiting for us with a sign, helped with luggage, and gave us great tips about Cairo. Very friendly and reliable driver.</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="driver-tag" data-en="Driver: Shady Zidan" data-ar="السائق: شادي زيدان">Driver: Shady Zidan</span>
+                        <span class="date" data-en="October 2024" data-ar="أكتوبر 2024">October 2024</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="customer-details">
+                                <h4 data-en="Fatma Hassan" data-ar="فاطمة حسن">Fatma Hassan</h4>
+                                <span class="customer-location" data-en="Local Resident" data-ar="مقيمة محلية">Local Resident</span>
+                            </div>
+                        </div>
+                        <div class="rating-stars">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p data-en="Amr has been my go-to driver for city tours and daily transportation. He knows Cairo like the back of his hand and always finds the quickest routes. Great value for money!" data-ar="عمر هو سائقي المفضل لجولات المدينة والنقل اليومي. يعرف القاهرة كظهر يده ودائماً يجد أسرع الطرق. قيمة ممتازة مقابل المال!">Amr has been my go-to driver for city tours and daily transportation. He knows Cairo like the back of his hand and always finds the quickest routes. Great value for money!</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <span class="driver-tag" data-en="Driver: Amr El-Sawaq" data-ar="السائق: عمرو السواق">Driver: Amr El-Sawaq</span>
+                        <span class="date" data-en="September 2024" data-ar="سبتمبر 2024">September 2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-stats">
+                <div class="stat-box">
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label" data-en="Average Rating" data-ar="متوسط التقييم">Average Rating</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label" data-en="Happy Customers" data-ar="عميل راضي">Happy Customers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label" data-en="Satisfaction Rate" data-ar="معدل الرضا">Satisfaction Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" data-en="Available" data-ar="متاح">Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 data-en="Book Your Ride" data-ar="احجز رحلتك">Book Your Ride</h2>
+                    <p data-en="Ready to experience premium transportation in Cairo? Contact us through any of the methods below or fill out the booking form." data-ar="مستعد لتجربة النقل المميز في القاهرة؟ تواصل معنا من خلال أي من الطرق أدناه أو املأ نموذج الحجز.">Ready to experience premium transportation in Cairo? Contact us through any of the methods below or fill out the booking form.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+                                <p>01145999569</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                                <p>mohamedmahmoud872003@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h4>
+                                <p>01145999569</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form-container">
+                    <form id="bookingForm" class="booking-form">
+                        <h3 data-en="Quick Booking" data-ar="حجز سريع">Quick Booking</h3>
+                        
+                        <div class="form-group">
+                            <input type="text" required placeholder="Full Name" data-en="Full Name" data-ar="الاسم الكامل">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" required placeholder="Phone Number" data-en="Phone Number" data-ar="رقم الهاتف">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="" data-en="Select Preferred Driver" data-ar="اختر السائق المفضل">Select Preferred Driver</option>
+                                <option value="shady" data-en="Shady Zidan" data-ar="شادي زيدان">Shady Zidan</option>
+                                <option value="ibrahim" data-en="Ibrahim Zidan" data-ar="إبراهيم زيدان">Ibrahim Zidan</option>
+                                <option value="amr" data-en="Amr El-Sawaq" data-ar="عمرو السواق">Amr El-Sawaq</option>
+                                <option value="mahmoud" data-en="Mahmoud Elsawaq" data-ar="محمود السواق">Mahmoud Elsawaq</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Additional Notes (Optional)" data-en="Additional Notes (Optional)" data-ar="ملاحظات إضافية (اختيارية)" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" data-en="Book Now" data-ar="احجز الآن">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-car"></i>
+                    <span data-en="Cairo Drivers" data-ar="سائقو القاهرة">Cairo Drivers</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#drivers" data-en="Drivers" data-ar="السائقون">Drivers</a>
+                    <a href="#comparison" data-en="Top Picks" data-ar="الأفضل">Top Picks</a>
+                    <a href="top-attractions.html" data-en="Top Attractions" data-ar="أهم المعالم">Top Attractions</a>
+                    <a href="#testimonials" data-en="Reviews" data-ar="التقييمات">Reviews</a>
+                    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+                </nav>
+                <p class="footer-text" data-en="© 2024 Cairo Drivers. Premium transportation services in Cairo, Egypt." data-ar="© 2024 سائقو القاهرة. خدمات النقل المميزة في القاهرة، مصر.">© 2024 Cairo Drivers. Premium transportation services in Cairo, Egypt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-en="Sign In" data-ar="تسجيل الدخول">Sign In</h2>
+                <span class="modal-close" onclick="closeModal('signinModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="signinForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="signinEmail" data-en="Email Address" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+                        <input type="email" id="signinEmail" name="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signinPassword" data-en="Password" data-ar="كلمة المرور">Password</label>
+                        <input type="password" id="signinPassword" name="password" required placeholder="••••••••">
+                    </div>
+                    <div class="form-options">
+                        <a href="#" class="forgot-password" data-en="Forgot Password?" data-ar="نسيت كلمة المرور؟">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="auth-btn signin-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span data-en="Sign In" data-ar="تسجيل الدخول">Sign In</span>
+                    </button>
+                    <div class="auth-divider">
+                        <span data-en="Or sign in with" data-ar="أو سجل الدخول باستخدام">Or sign in with</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+                    <div class="auth-switch">
+                        <span data-en="Don't have an account?" data-ar="ليس لديك حساب؟">Don't have an account?</span>
+                        <a href="#" onclick="switchToSignup()" data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-en="Create Account" data-ar="إنشاء حساب">Create Account</h2>
+                <span class="modal-close" onclick="closeModal('signupModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signupFirstName" data-en="First Name" data-ar="الاسم الأول">First Name</label>
+                            <input type="text" id="signupFirstName" name="firstName" required placeholder="Ahmed">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupLastName" data-en="Last Name" data-ar="اسم العائلة">Last Name</label>
+                            <input type="text" id="signupLastName" name="lastName" required placeholder="Mohamed">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail" data-en="Email Address" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+                        <input type="email" id="signupEmail" name="email" required placeholder="ahmed@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                        <input type="tel" id="signupPhone" name="phone" required placeholder="+20 10 1234 5678">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signupPassword" data-en="Password" data-ar="كلمة المرور">Password</label>
+                            <input type="password" id="signupPassword" name="password" required placeholder="••••••••">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword" data-en="Confirm Password" data-ar="تأكيد كلمة المرور">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="••••••••">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupCity" data-en="City" data-ar="المدينة">City</label>
+                        <select id="signupCity" name="city" required>
+                            <option value="" data-en="Select your city" data-ar="اختر مدينتك">Select your city</option>
+                            <option value="cairo" data-en="Cairo" data-ar="القاهرة">Cairo</option>
+                            <option value="giza" data-en="Giza" data-ar="الجيزة">Giza</option>
+                            <option value="alexandria" data-en="Alexandria" data-ar="الإسكندرية">Alexandria</option>
+                            <option value="other" data-en="Other" data-ar="أخرى">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupGender" data-en="Gender" data-ar="الجنس">Gender</label>
+                        <select id="signupGender" name="gender" required>
+                            <option value="" data-en="Select gender" data-ar="اختر الجنس">Select gender</option>
+                            <option value="male" data-en="Male" data-ar="ذكر">Male</option>
+                            <option value="female" data-en="Female" data-ar="أنثى">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-options" style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="agreeTerms" required style="width: 18px; height: 18px; cursor: pointer; accent-color: #667eea;">
+                        <label for="agreeTerms" style="margin: 0; cursor: pointer; font-size: 13px;">
+                            <span data-en="I agree to the Terms of Service and Privacy Policy" data-ar="أوافق على شروط الخدمة وسياسة الخصوصية">I agree to the Terms of Service and Privacy Policy</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="auth-btn signup-btn">
+                        <i class="fas fa-user-plus"></i>
+                        <span data-en="Create Account" data-ar="إنشاء حساب">Create Account</span>
+                    </button>
+                    <div class="auth-divider">
+                        <span data-en="Or sign up with" data-ar="أو أنشئ حساب باستخدام">Or sign up with</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+                    <div class="auth-switch">
+                        <span data-en="Already have an account?" data-ar="لديك حساب بالفعل؟">Already have an account?</span>
+                        <a href="#" onclick="switchToSignin()" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Famous Foods Modal -->
+    <div id="foodsModal" class="modal">
+        <div class="modal-content foods-modal">
+            <div class="modal-header">
+                <h2 data-en="Famous Egyptian Foods" data-ar="أشهر الأكلات المصرية">Famous Egyptian Foods</h2>
+                <span class="modal-close" onclick="closeModal('foodsModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="foods-grid">
+                    <!-- Food Item 1: Koshari -->
+                    <div class="food-item">
+                        <div class="food-image">
+                            <div class="koshari-visual">
+                                <div class="koshari-layers">
+                                    <div class="layer rice-layer">🍚</div>
+                                    <div class="layer lentil-layer">🟤</div>
+                                    <div class="layer pasta-layer">🍝</div>
+                                    <div class="layer sauce-layer">🍅</div>
+                                    <div class="layer onion-layer">🧅</div>
+                                </div>
+                                <div class="koshari-title">كشري</div>
+                            </div>
+                        </div>
+                        <div class="food-info">
+                            <h3 data-en="Koshari" data-ar="كشري">Koshari</h3>
+                            <p data-en="Egypt's national dish made with rice, lentils, pasta, and topped with spicy tomato sauce and crispy onions." data-ar="الطبق الشعبي المصري المكون من الأرز والعدس والمكرونة مع الصلصة الحارة والبصل المقلي.">Egypt's national dish made with rice, lentils, pasta, and topped with spicy tomato sauce and crispy onions.</p>
+                            <div class="food-price">
+                                <span data-en="Price: 15-25 EGP" data-ar="السعر: 15-25 جنيه">Price: 15-25 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 2: Ful Medames -->
+                    <div class="food-item">
+                        <div class="food-image">
+                            <div class="food-placeholder">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                        </div>
+                        <div class="food-info">
+                            <h3 data-en="Ful Medames" data-ar="فول مدمس">Ful Medames</h3>
+                            <p data-en="Traditional breakfast dish of slow-cooked fava beans served with olive oil, garlic, and lemon juice." data-ar="طبق الإفطار التقليدي من الفول المطبوخ ببطء مع زيت الزيتون والثوم وعصير الليمون.">Traditional breakfast dish of slow-cooked fava beans served with olive oil, garlic, and lemon juice.</p>
+                            <div class="food-price">
+                                <span data-en="Price: 8-15 EGP" data-ar="السعر: 8-15 جنيه">Price: 8-15 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 3: Molokhia -->
+                    <div class="food-item">
+                        <div class="food-image">
+                            <div class="food-placeholder">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                        </div>
+                        <div class="food-info">
+                            <h3 data-en="Molokhia" data-ar="ملوخية">Molokhia</h3>
+                            <p data-en="Green soup made from jute leaves, typically served with rice and chicken or meat." data-ar="شوربة خضراء مصنوعة من أوراق الملوخية، تُقدم عادة مع الأرز والفراخ أو اللحمة.">Green soup made from jute leaves, typically served with rice and chicken or meat.</p>
+                            <div class="food-price">
+                                <span data-en="Price: 30-50 EGP" data-ar="السعر: 30-50 جنيه">Price: 30-50 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 4: Mahshi -->
+                    <div class="food-item">
+                        <div class="food-image">
+                            <div class="food-placeholder">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                        </div>
+                        <div class="food-info">
+                            <h3 data-en="Mahshi" data-ar="محشي">Mahshi</h3>
+                            <p data-en="Stuffed vegetables (peppers, zucchini, cabbage) filled with rice, herbs, and sometimes meat." data-ar="خضروات محشوة (فلفل، كوسة، كرنب) مملوءة بالأرز والأعشاب وأحياناً اللحمة.">Stuffed vegetables (peppers, zucchini, cabbage) filled with rice, herbs, and sometimes meat.</p>
+                            <div class="food-price">
+                                <span data-en="Price: 25-40 EGP" data-ar="السعر: 25-40 جنيه">Price: 25-40 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 5: Roz Bel Laban -->
+                    <div class="food-item">
+                        <div class="food-image">
+                            <div class="food-placeholder">
+                                <i class="fas fa-ice-cream"></i>
+                            </div>
+                        </div>
+                        <div class="food-info">
+                            <h3 data-en="Roz Bel Laban" data-ar="رز بلبن">Roz Bel Laban</h3>
+                            <p data-en="Traditional rice pudding dessert flavored with vanilla and topped with nuts and cinnamon." data-ar="حلوى الأرز بالحليب التقليدية بنكهة الفانيليا ومزينة بالمكسرات والقرفة.">Traditional rice pudding dessert flavored with vanilla and topped with nuts and cinnamon.</p>
+                            <div class="food-price">
+                                <span data-en="Price: 12-20 EGP" data-ar="السعر: 12-20 جنيه">Price: 12-20 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 6: Ta'meya (Falafel) -->
+                    <div class="food-item">
+                        <div class="food-image">
+                            <div class="tameya-container">
+                                <img src="صور/طعمية.png" alt="Ta'meya - Egyptian Falafel" class="food-img tameya-img" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="food-info">
+                            <h3 data-en="Ta'meya (Egyptian Falafel)" data-ar="طعمية (فلافل مصري)">Ta'meya (Egyptian Falafel)</h3>
+                            <p data-en="Deep-fried balls made from ground fava beans and herbs, served in pita bread with salad." data-ar="كرات مقلية مصنوعة من الفول المطحون والأعشاب، تُقدم في الخبز البلدي مع السلطة.">Deep-fried balls made from ground fava beans and herbs, served in pita bread with salad.</p>
+                            <div class="food-price">
+                                <span data-en="Price: 5-12 EGP" data-ar="السعر: 5-12 جنيه">Price: 5-12 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="foods-footer">
+                    <div class="food-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p data-en="Prices may vary depending on location and restaurant. These are typical street food and local restaurant prices in Cairo." data-ar="قد تختلف الأسعار حسب المكان والمطعم. هذه أسعار نموذجية لطعام الشارع والمطاعم المحلية في القاهرة.">Prices may vary depending on location and restaurant. These are typical street food and local restaurant prices in Cairo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="driver-script.js"></script>
+    
+    <!-- Slideshow Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = -1; // Start at -1 so first call shows slide 0 (image)
+            let slideTimeout;
+            
+            function showNextSlide() {
+                // Hide current slide if exists
+                if (currentSlide >= 0) {
+                    slides[currentSlide].classList.remove('active');
+                }
+                
+                // Move to next slide
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                // Show next slide
+                slides[currentSlide].classList.add('active');
+                
+                // Handle video playback
+                const currentElement = slides[currentSlide].querySelector('video, img');
+                if (currentElement && currentElement.tagName === 'VIDEO') {
+                    currentElement.play().catch(e => console.log('Video play failed:', e));
+                }
+                
+                // Pause previous videos
+                slides.forEach((slide, index) => {
+                    if (index !== currentSlide) {
+                        const video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                        }
+                    }
+                });
+                
+                // Set timing for next slide
+                let slideDuration = 4000; // Default 4 seconds
+                
+                // Video 1 (index 1) should play for full duration
+                if (currentSlide === 1 && currentElement && currentElement.tagName === 'VIDEO') {
+                    if (currentElement.readyState >= 1) {
+                        slideDuration = currentElement.duration * 1000; // Convert to milliseconds
+                    } else {
+                        currentElement.addEventListener('loadedmetadata', function() {
+                            clearTimeout(slideTimeout);
+                            slideTimeout = setTimeout(showNextSlide, currentElement.duration * 1000);
+                        }, { once: true });
+                        return;
+                    }
+                }
+                
+                clearTimeout(slideTimeout);
+                slideTimeout = setTimeout(showNextSlide, slideDuration);
+            }
+            
+            // Start slideshow with image first
+            showNextSlide();
+        });
+    </script>
+</body>
+</html>

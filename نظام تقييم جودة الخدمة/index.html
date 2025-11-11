@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تقييم رضا العملاء عن جودة الخدمة</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="card" id="card" data-state="bad">
+    <h1 class="title">كيف تقيّم جودة الخدمة؟</h1>
+
+    <div class="face" aria-hidden="true">
+      <div class="eye eye--left"></div>
+      <div class="eye eye--right"></div>
+      <div class="mouth"></div>
+    </div>
+
+    <div class="label" id="label">سيئ</div>
+
+    <div class="slider-wrap" dir="ltr">
+      <input id="slider" type="range" min="0" max="100" step="1" value="0" />
+      <div class="scale">
+        <span>سيئ</span>
+        <span>ليس سيئًا</span>
+        <span>جيد</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

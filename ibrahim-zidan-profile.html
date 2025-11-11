@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Ibrahim Zidan - Professional Driver Profile" data-ar="إبراهيم زيدان - ملف السائق المحترف">Ibrahim Zidan - Professional Driver Profile</title>
+    <meta name="description" content="Detailed profile of Ibrahim Zidan, professional driver in Cairo with 15 years experience. Book luxury transportation services.">
+    
+    <!-- External Resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="driver-styles.css">
+    <link rel="stylesheet" href="review-suggestions.css">
+    
+    <style>
+        .profile-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin: -50px auto 2rem;
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-header {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--success-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 600;
+        }
+        
+        .profile-info h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--section-bg);
+            border-radius: var(--border-radius);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .service-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .service-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .reviews-section {
+            margin: 2rem 0;
+        }
+        
+        .review-item {
+            background: var(--section-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            margin-top: 2rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .back-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="driver-comparison.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        <span data-en="Back to Drivers" data-ar="العودة للسائقين">Back to Drivers</span>
+    </a>
+
+    <!-- Profile Hero -->
+    <section class="profile-hero">
+        <div class="container">
+            <h1 data-en="Professional Driver Profile" data-ar="ملف السائق المحترف">Professional Driver Profile</h1>
+            <p data-en="Detailed information and booking options" data-ar="معلومات مفصلة وخيارات الحجز">Detailed information and booking options</p>
+        </div>
+    </section>
+
+    <!-- Profile Card -->
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="ibrahim zidan.jpg" alt="Ibrahim Zidan" loading="lazy">
+                    <div class="profile-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                
+                <div class="profile-info">
+                    <h1 data-en="Ibrahim Zidan" data-ar="إبراهيم زيدان">Ibrahim Zidan</h1>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text" data-en="4.8/5 (198 reviews)" data-ar="4.8/5 (198 تقييم)">4.8/5 (198 reviews)</span>
+                    </div>
+                    <p data-en="Experienced driver with 15 years serving Cairo's elite. Expert in luxury transportation and VIP services. Fluent in English and Arabic." data-ar="سائق خبير مع 15 سنة في خدمة نخبة القاهرة. خبير في النقل الفاخر وخدمات كبار الشخصيات. يتحدث الإنجليزية والعربية بطلاقة.">Experienced driver with 15 years serving Cairo's elite. Expert in luxury transportation and VIP services. Fluent in English and Arabic.</p>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label" data-en="Years Experience" data-ar="سنة خبرة">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">198</div>
+                    <div class="stat-label" data-en="Happy Customers" data-ar="عميل راضي">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label" data-en="Average Rating" data-ar="التقييم المتوسط">Average Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label" data-en="Avg Trip Time (min)" data-ar="متوسط وقت الرحلة (دقيقة)">Avg Trip Time (min)</div>
+                </div>
+            </div>
+
+            <!-- Vehicle Information -->
+            <h2 class="section-title" data-en="Available Cars" data-ar="السيارات المتاحة">Available Cars</h2>
+            
+            <!-- Car Images -->
+            <div class="car-showcase" style="margin-bottom: 2rem; text-align: center; background-image: url('صور/background.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 3rem 2rem; border-radius: var(--border-radius); box-shadow: 0 15px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden;">
+                <!-- Overlay for better text readability -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); border-radius: var(--border-radius);"></div>
+                
+                <div style="position: relative; z-index: 2;">
+                    <h3 style="color: white; font-weight: 300; font-size: 2.2rem; text-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align: center; margin-bottom: 3rem; letter-spacing: 2px;" data-en="PREMIUM FLEET" data-ar="الأسطول المميز">PREMIUM FLEET</h3>
+                    
+                    <!-- Flip Cards Design from كروت.html -->
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; justify-items: center; width: 100%; padding: 20px; max-width: 800px; margin: 0 auto;">
+                        <style>
+                            @media (max-width: 600px) {
+                                .car-cards-container {
+                                    grid-template-columns: 1fr !important;
+                                    gap: 20px !important;
+                                }
+                            }
+                        </style>
+                        <!-- Mercedes Flip Card -->
+                        <div class="car-card" style="width: 280px; height: 320px; perspective: 1000px;" onmouseover="this.querySelector('.flip-inner').style.transform='rotateY(180deg)'" onmouseout="this.querySelector('.flip-inner').style.transform='rotateY(0deg)'">
+                            <div class="flip-inner" style="position: relative; width: 100%; height: 100%; transition: transform 0.6s ease-in-out; transform-style: preserve-3d;">
+                                <!-- Front Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                    <img src="cars images/ibrahim cars 2/coor.webp" alt="Mercedes S-Class" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 15px;">
+                                </div>
+                                <!-- Back Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: linear-gradient(135deg, #2c3e50, #34495e); transform: rotateY(180deg); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center;">
+                                    <i class="fa fa-car" style="font-size: 3rem; margin-bottom: 1rem; color: #ecf0f1;"></i>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;" data-en="Mercedes S-Class" data-ar="مرسيدس إس كلاس">Mercedes S-Class</h4>
+                                    <p style="font-size: 1rem; margin-bottom: 1rem; opacity: 0.9;" data-en="Luxury Sedan • 2023" data-ar="سيدان فاخرة • 2023">Luxury Sedan • 2023</p>
+                                    <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">VIP AVAILABLE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BMW Flip Card -->
+                        <div class="car-card" style="width: 280px; height: 320px; perspective: 1000px;" onmouseover="this.querySelector('.flip-inner').style.transform='rotateY(180deg)'" onmouseout="this.querySelector('.flip-inner').style.transform='rotateY(0deg)'">
+                            <div class="flip-inner" style="position: relative; width: 100%; height: 100%; transition: transform 0.6s ease-in-out; transform-style: preserve-3d;">
+                                <!-- Front Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                    <img src="cars images/ibrahim cars 2/ibrahim zidan 3.webp" alt="BMW 7 Series" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 15px;">
+                                </div>
+                                <!-- Back Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: linear-gradient(135deg, #3498db, #2980b9); transform: rotateY(180deg); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center;">
+                                    <i class="fa fa-car" style="font-size: 3rem; margin-bottom: 1rem; color: #ecf0f1;"></i>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;" data-en="BMW 7 Series" data-ar="بي إم دبليو 7 سيريز">BMW 7 Series</h4>
+                                    <p style="font-size: 1rem; margin-bottom: 1rem; opacity: 0.9;" data-en="Executive Sedan • 2023" data-ar="سيدان تنفيذية • 2023">Executive Sedan • 2023</p>
+                                    <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">PREMIUM AVAILABLE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Audi Flip Card -->
+                        <div class="car-card" style="width: 280px; height: 320px; perspective: 1000px;" onmouseover="this.querySelector('.flip-inner').style.transform='rotateY(180deg)'" onmouseout="this.querySelector('.flip-inner').style.transform='rotateY(0deg)'">
+                            <div class="flip-inner" style="position: relative; width: 100%; height: 100%; transition: transform 0.6s ease-in-out; transform-style: preserve-3d;">
+                                <!-- Front Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #e67e22, #d35400); display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                                        <i class="fa fa-car" style="font-size: 4rem; color: white; opacity: 0.9;"></i>
+                                    </div>
+                                </div>
+                                <!-- Back Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: linear-gradient(135deg, #e67e22, #d35400); transform: rotateY(180deg); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center;">
+                                    <i class="fa fa-car" style="font-size: 3rem; margin-bottom: 1rem; color: #ecf0f1;"></i>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;" data-en="Audi A8" data-ar="أودي إيه 8">Audi A8</h4>
+                                    <p style="font-size: 1rem; margin-bottom: 1rem; opacity: 0.9;" data-en="Luxury Sedan • 2023" data-ar="سيدان فاخرة • 2023">Luxury Sedan • 2023</p>
+                                    <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">LUXURY AVAILABLE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lexus Flip Card -->
+                        <div class="car-card" style="width: 280px; height: 320px; perspective: 1000px;" onmouseover="this.querySelector('.flip-inner').style.transform='rotateY(180deg)'" onmouseout="this.querySelector('.flip-inner').style.transform='rotateY(0deg)'">
+                            <div class="flip-inner" style="position: relative; width: 100%; height: 100%; transition: transform 0.6s ease-in-out; transform-style: preserve-3d;">
+                                <!-- Front Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #27ae60, #16a085); display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                                        <i class="fa fa-car" style="font-size: 4rem; color: white; opacity: 0.9;"></i>
+                                    </div>
+                                </div>
+                                <!-- Back Side -->
+                                <div style="position: absolute; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; backface-visibility: hidden; background: linear-gradient(135deg, #27ae60, #16a085); transform: rotateY(180deg); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center;">
+                                    <i class="fa fa-car" style="font-size: 3rem; margin-bottom: 1rem; color: #ecf0f1;"></i>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;" data-en="Lexus LS" data-ar="لكزس إل إس">Lexus LS</h4>
+                                    <p style="font-size: 1rem; margin-bottom: 1rem; opacity: 0.9;" data-en="Premium Sedan • 2023" data-ar="سيدان مميزة • 2023">Premium Sedan • 2023</p>
+                                    <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">ECO-LUX AVAILABLE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p style="color: white; font-weight: 600; font-size: 1.1rem; text-shadow: 0 2px 8px rgba(0,0,0,0.7); text-align: center; opacity: 0.9;" data-en="Hover over cards to see vehicle details" data-ar="مرر الماوس فوق البطاقات لرؤية تفاصيل المركبة">Hover over cards to see vehicle details</p>
+                </div>
+            </div>
+            
+
+
+            <!-- Services -->
+            <h2 class="section-title" data-en="VIP Services Offered" data-ar="الخدمات المميزة المقدمة">VIP Services Offered</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 data-en="VIP Transportation" data-ar="النقل المميز">VIP Transportation</h3>
+                    <p data-en="Luxury transportation services for executives and VIP clients" data-ar="خدمات النقل الفاخرة للمديرين التنفيذيين وكبار الشخصيات">Luxury transportation services for executives and VIP clients</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 data-en="Corporate Events" data-ar="الفعاليات الشركاتية">Corporate Events</h3>
+                    <p data-en="Professional transportation for business meetings and corporate events" data-ar="نقل محترف للاجتماعات التجارية والفعاليات الشركاتية">Professional transportation for business meetings and corporate events</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h3 data-en="Airport VIP Service" data-ar="خدمة المطار المميزة">Airport VIP Service</h3>
+                    <p data-en="Premium airport transfers with meet & greet service" data-ar="نقل مطار مميز مع خدمة الاستقبال والترحيب">Premium airport transfers with meet & greet service</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3 data-en="Concierge Service" data-ar="خدمة الكونسيرج">Concierge Service</h3>
+                    <p data-en="Personal assistant services including reservations and arrangements" data-ar="خدمات المساعد الشخصي بما في ذلك الحجوزات والترتيبات">Personal assistant services including reservations and arrangements</p>
+                </div>
+            </div>
+
+            <!-- Customer Reviews -->
+            <h2 class="section-title" data-en="VIP Customer Reviews" data-ar="تقييمات العملاء المميزين">VIP Customer Reviews</h2>
+            
+
+            <div class="reviews-section">
+                <div class="review-item">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="Ahmed Farouk" class="review-avatar">
+                        <div>
+                            <h4 data-en="Ahmed Farouk" data-ar="أحمد فاروق">Ahmed Farouk</h4>
+                            <p data-en="CEO, Tech Company" data-ar="الرئيس التنفيذي، شركة تقنية">CEO, Tech Company</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p data-en="Ibrahim provides exceptional VIP service. His Honda Accord is immaculate and he knows all the best routes in Cairo. Perfect for business meetings and client transportation." data-ar="إبراهيم يقدم خدمة كبار الشخصيات الاستثنائية. سيارته الهوندا أكورد نظيفة جداً ويعرف أفضل الطرق في القاهرة. مثالي للاجتماعات التجارية ونقل العملاء.">Ibrahim provides exceptional VIP service. His Honda Accord is immaculate and he knows all the best routes in Cairo. Perfect for business meetings and client transportation.</p>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face" alt="Layla Hassan" class="review-avatar">
+                        <div>
+                            <h4 data-en="Layla Hassan" data-ar="ليلى حسن">Layla Hassan</h4>
+                            <p data-en="Business Executive" data-ar="مديرة تنفيذية">Business Executive</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p data-en="Ibrahim is my go-to driver for all important meetings. He's always punctual, professional, and his car is luxury class. Highly recommend for VIP transportation!" data-ar="إبراهيم هو سائقي المفضل لجميع الاجتماعات المهمة. إنه دائماً دقيق في المواعيد ومحترف وسيارته من الفئة الفاخرة. أنصح به بشدة للنقل المميز!">Ibrahim is my go-to driver for all important meetings. He's always punctual, professional, and his car is luxury class. Highly recommend for VIP transportation!</p>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="David Miller" class="review-avatar">
+                        <div>
+                            <h4 data-en="David Miller" data-ar="ديفيد ميلر">David Miller</h4>
+                            <p data-en="International Consultant" data-ar="مستشار دولي">International Consultant</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p data-en="Outstanding service! Ibrahim speaks excellent English and Arabic. His knowledge of Cairo is impressive and he always gets me to my destination on time. The Honda Accord is very comfortable for long trips." data-ar="خدمة متميزة! إبراهيم يتحدث الإنجليزية والعربية بامتياز. معرفته بالقاهرة مذهلة ودائماً يوصلني إلى وجهتي في الوقت المحدد. الهوندا أكورد مريحة جداً للرحلات الطويلة.">Outstanding service! Ibrahim speaks excellent English and Arabic. His knowledge of Cairo is impressive and he always gets me to my destination on time. The Honda Accord is very comfortable for long trips.</p>
+                </div>
+            </div>
+
+            <!-- Customer Review Form -->
+            <h2 class="section-title" data-en="Share Your Experience with Ibrahim" data-ar="شارك تجربتك مع إبراهيم">Share Your Experience with Ibrahim</h2>
+            
+            <!-- Service Quality Rating Widget (scoped) -->
+            <div class="service-quality-widget" dir="rtl" aria-label="Service Quality Rating">
+                <style>
+                 /* Scoped Service Quality Widget Styles */
+                 .service-quality-widget { margin: 1rem 0 1.5rem; display: grid; place-items: center; }
+                 .service-quality-widget { --sqw-bad:#ef6351; --sqw-mid:#f3a712; --sqw-good:#7bd389; --sqw-proud:#ffd93d; --sqw-card-w:420px; font-family: inherit; }
+                 .service-quality-widget .sqw-card{ width:min(100%, var(--sqw-card-w)); background:var(--sqw-bad); color:#fff; border-radius:24px; padding:28px 24px 32px; transition:background-color .35s ease; box-shadow:0 12px 40px rgba(0,0,0,.15), inset 0 0 0 1px rgba(255,255,255,.12); }
+                 .service-quality-widget .sqw-title{ text-align:center; margin:0 0 20px; font-weight:800; letter-spacing:.2px; font-size:1.25rem; }
+                 .service-quality-widget .sqw-face{ width:100%; height:200px; display:grid; place-items:center; position:relative; margin:0 auto 8px; }
+                 .service-quality-widget .sqw-eye{ position:absolute; top:56px; width:48px; height:48px; background:#1a1a1a; border-radius:50%; transition:all .35s ease; filter:contrast(120%); }
+                 .service-quality-widget .sqw-eye--left{ left:26%; }
+                 .service-quality-widget .sqw-eye--right{ right:26%; }
+                 .service-quality-widget .sqw-mouth{ position:absolute; bottom:56px; width:78px; height:38px; background:#1a1a1a; border-radius:0 0 78px 78px; transform:translateY(8px) rotate(180deg); transition:all .35s ease; }
+                 .service-quality-widget .sqw-label{ text-align:center; font-weight:800; font-size:28px; letter-spacing:.6px; margin-bottom:6px; text-transform:uppercase; opacity:.95; }
+                 .service-quality-widget .sqw-slider-wrap{ margin-top:8px; width:100%; direction:ltr; }
+                 .service-quality-widget input[type="range"]{ -webkit-appearance:none; appearance:none; width:100%; height:6px; background:rgba(0,0,0,.15); border-radius:999px; outline:none; }
+                 .service-quality-widget input[type="range"]::-webkit-slider-thumb{ -webkit-appearance:none; width:26px; height:26px; border-radius:50%; background:#1a1a1a; cursor:pointer; border:2px solid rgba(255,255,255,.4); box-shadow:0 2px 6px rgba(0,0,0,.3); }
+                 .service-quality-widget input[type="range"]::-moz-range-thumb{ width:26px; height:26px; border-radius:50%; background:#1a1a1a; border:2px solid rgba(255,255,255,.4); }
+                 .service-quality-widget .sqw-scale{ font-size:14px; color:rgba(0,0,0,.75); display:flex; justify-content:space-between; margin-top:8px; padding:0 2px; }
+                 .service-quality-widget .sqw-card[data-state="bad"]{ background:var(--sqw-bad); }
+                 .service-quality-widget .sqw-card[data-state="mid"]{ background:var(--sqw-mid); }
+                 .service-quality-widget .sqw-card[data-state="good"]{ background:var(--sqw-good); }
+                 .service-quality-widget .sqw-card[data-state="proud"]{ background:var(--sqw-proud); }
+                 .service-quality-widget .sqw-card[data-state="mid"] .sqw-eye{ width:64px; height:18px; border-radius:12px; top:72px; }
+                 .service-quality-widget .sqw-card[data-state="good"] .sqw-eye{ width:78px; height:78px; border-radius:50%; top:42px; }
+                 .service-quality-widget .sqw-card[data-state="mid"] .sqw-mouth{ width:80px; height:28px; border-radius:24px; transform:translateY(10px) rotate(180deg); }
+                 .service-quality-widget .sqw-card[data-state="good"] .sqw-mouth{ width:80px; height:42px; border-radius:0 0 80px 80px; bottom:24px; transform:translateY(0) rotate(0deg); }
+                 .service-quality-widget .sqw-card[data-state="proud"] .sqw-eye{ width:48px; height:20px; border-radius:24px; top:60px; }
+                 .service-quality-widget .sqw-card[data-state="proud"] .sqw-mouth{ width:90px; height:45px; border-radius:0 0 90px 90px; bottom:20px; transform:translateY(0) rotate(0deg); }
+                </style>
+                <div class="sqw-card" data-state="bad" data-sqw="card">
+                    <h3 class="sqw-title">كيف تقيّم جودة الخدمة؟</h3>
+                    <div class="sqw-face" aria-hidden="true">
+                        <div class="sqw-eye sqw-eye--left"></div>
+                        <div class="sqw-eye sqw-eye--right"></div>
+                        <div class="sqw-mouth"></div>
+                    </div>
+                    <div class="sqw-label" data-sqw="label">سيئ</div>
+                    <div class="sqw-slider-wrap">
+                        <input type="range" min="0" max="100" step="1" value="0" data-sqw="slider" aria-label="Service quality slider" />
+                        <div class="sqw-scale">
+                            <span>سيئ</span>
+                            <span>ليس سيئًا</span>
+                            <span>جيد</span>
+                            <span>فخور</span>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                 (function(){
+                   const widget = document.currentScript && document.currentScript.previousElementSibling && document.currentScript.previousElementSibling.closest('.service-quality-widget');
+                   const root = widget || document.querySelector('.service-quality-widget');
+                   if(!root) return;
+                   const card = root.querySelector('[data-sqw="card"]');
+                   const label = root.querySelector('[data-sqw="label"]');
+                   const slider = root.querySelector('[data-sqw="slider"]');
+                   function lerp(a,b,t){return a + (b-a)*t}
+                   function update(v){
+                     const t = v/100;
+                     let state = 'bad';
+                     let text = 'سيئ';
+                     if (t >= 0.25 && t < 0.5){ state = 'mid'; text = 'ليس سيئًا'; }
+                     else if (t >= 0.5 && t < 0.75){ state = 'good'; text = 'جيد'; }
+                     else if (t >= 0.75){ state = 'proud'; text = 'فخور'; }
+                     card.dataset.state = state;
+                     label.textContent = text;
+                     const left = card.querySelector('.sqw-eye--left');
+                     const right = card.querySelector('.sqw-eye--right');
+                     const mouth = card.querySelector('.sqw-mouth');
+                     const shift = lerp(26, 22, Math.abs(0.5 - t) * 2);
+                     left.style.left = state === 'good' || state === 'proud' ? '18%' : shift + '%';
+                     right.style.right = state === 'good' || state === 'proud' ? '18%' : shift + '%';
+                     const rot = state === 'good' || state === 'proud' ? 0 : 180;
+                     const y = state === 'good' || state === 'proud' ? 8 : (state === 'mid' ? 10 : 8);
+                     mouth.style.transform = 'translateY(' + y + 'px) rotate(' + rot + 'deg)';
+                   }
+                   slider.addEventListener('input', function(e){ update(+e.target.value); });
+                   update(+slider.value);
+                 })();
+                </script>
+            </div>
+            
+            <div class="rating-system">
+                <div class="rating-container">
+                    <div class="rating-form">
+                        <h3 data-en="Leave Your Review" data-ar="اترك مراجعتك">Leave Your Review</h3>
+                        <form id="reviewForm" onsubmit="submitReview(event, 'ibrahim')">
+                            <div class="form-group">
+                                <label data-en="Your Name" data-ar="اسمك">Your Name</label>
+                                <input type="text" id="customerName" required placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-en="Your Review" data-ar="مراجعتك">Your Review</label>
+                                
+                                <!-- Pre-written Review Suggestions -->
+                                <div class="review-suggestions">
+                                    <h4 data-en="Quick Review Options" data-ar="خيارات المراجعة السريعة">Quick Review Options</h4>
+                                    
+                                    <div class="suggestion-category">
+                                        <h5 data-en="Positive" data-ar="إيجابية" class="positive-label">Positive</h5>
+                                        <div class="suggestion-buttons positive">
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السائق كان محترفاً في التعامل ومهذب', 'positive')" data-en="Professional and polite driver" data-ar="السائق كان محترفاً في التعامل ومهذب">Professional & Polite</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السيارة نظيفة ومجهزة بشكل ممتاز', 'positive')" data-en="Clean and well-equipped car" data-ar="السيارة نظيفة ومجهزة بشكل ممتاز">Clean & Well-equipped</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('الالتزام بالمواعيد كان دقيقاً', 'positive')" data-en="Punctual timing" data-ar="الالتزام بالمواعيد كان دقيقاً">Punctual</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السعر مناسب جداً مقارنة بالخدمة', 'positive')" data-en="Great value for money" data-ar="السعر مناسب جداً مقارنة بالخدمة">Great Value</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('شعرت بالأمان أثناء الرحلة', 'positive')" data-en="Felt safe during the trip" data-ar="شعرت بالأمان أثناء الرحلة">Safe Trip</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السائق يعرف الطريق جيداً', 'positive')" data-en="Driver knows routes well" data-ar="السائق يعرف الطريق جيداً">Knows Routes</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="suggestion-category">
+                                        <h5 data-en="Neutral" data-ar="محايدة" class="neutral-label">Neutral</h5>
+                                        <div class="suggestion-buttons neutral">
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السائق تأخر قليلاً في الوصول ولكن كان متعاوناً', 'neutral')" data-en="Driver was slightly late but cooperative" data-ar="السائق تأخر قليلاً في الوصول ولكن كان متعاوناً">Slightly Late</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('التواصل أحياناً كان غير واضح', 'neutral')" data-en="Communication sometimes unclear" data-ar="التواصل أحياناً كان غير واضح">Communication Issues</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('الطريق المختار كان مزدحماً نوعاً ما', 'neutral')" data-en="Route was somewhat crowded" data-ar="الطريق المختار كان مزدحماً نوعاً ما">Crowded Route</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السيارة بحاجة إلى نظافة أفضل قليلاً', 'neutral')" data-en="Car needs slightly better cleaning" data-ar="السيارة بحاجة إلى نظافة أفضل قليلاً">Needs Cleaning</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="suggestion-category">
+                                        <h5 data-en="Negative" data-ar="سلبية" class="negative-label">Negative</h5>
+                                        <div class="suggestion-buttons negative">
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السائق تأخر عن الموعد المحدد', 'negative')" data-en="Driver was late" data-ar="السائق تأخر عن الموعد المحدد">Late Arrival</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('القيادة كانت غير مريحة بعض الشيء', 'negative')" data-en="Driving was somewhat uncomfortable" data-ar="القيادة كانت غير مريحة بعض الشيء">Uncomfortable Driving</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('طريقة التعامل لم تكن احترافية', 'negative')" data-en="Unprofessional behavior" data-ar="طريقة التعامل لم تكن احترافية">Unprofessional</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('لم أستطع التواصل مع السائق بسهولة', 'negative')" data-en="Difficult to communicate" data-ar="لم أستطع التواصل مع السائق بسهولة">Communication Problems</button>
+                                            <button type="button" class="suggestion-btn" onclick="addReviewText('السائق لم يكن على دراية جيدة بالطريق', 'negative')" data-en="Driver unfamiliar with routes" data-ar="السائق لم يكن على دراية جيدة بالطريق">Poor Route Knowledge</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="reviewText" class="review-editor" contenteditable="true" data-placeholder="اكتب تجربتك مع إبراهيم..." required></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-en="Service Type" data-ar="نوع الخدمة">Service Type</label>
+                                <select id="tripType">
+                                    <option value="vip" data-en="VIP Service" data-ar="خدمة مميزة">VIP Service</option>
+                                    <option value="business" data-en="Business Meeting" data-ar="اجتماع عمل">Business Meeting</option>
+                                    <option value="executive" data-en="Executive Transport" data-ar="نقل تنفيذي">Executive Transport</option>
+                                    <option value="diplomatic" data-en="Diplomatic Service" data-ar="خدمة دبلوماسية">Diplomatic Service</option>
+                                    <option value="luxury" data-en="Luxury Tour" data-ar="جولة فاخرة">Luxury Tour</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="submit-rating-btn" data-en="Submit Review" data-ar="إرسال المراجعة">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact & Booking -->
+            <div class="contact-section">
+                <div class="container">
+                    <h2 data-en="Book Ibrahim Zidan Now" data-ar="احجز إبراهيم زيدان الآن">Book Ibrahim Zidan Now</h2>
+                    <p data-en="Ready to experience luxury VIP transportation with Ibrahim? Contact him directly:" data-ar="مستعد لتجربة النقل المميز الفاخر مع إبراهيم؟ تواصل معه مباشرة:">Ready to experience luxury VIP transportation with Ibrahim? Contact him directly:</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+                                <p>01111011403</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                                <p data-en="Not Available" data-ar="غير متاح">Not Available</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h4>
+                                <p>01111011403</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-facebook"></i>
+                            <div>
+                                <h4 data-en="Facebook" data-ar="فيسبوك">Facebook</h4>
+                                <p><a href="https://facebook.com/ibrahimzidan.vip" target="_blank" data-en="@ibrahimzidan.vip" data-ar="@ibrahimzidan.vip">@ibrahimzidan.vip</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-twitter"></i>
+                            <div>
+                                <h4 data-en="Twitter" data-ar="تويتر">Twitter</h4>
+                                <p><a href="https://twitter.com/ibrahim_vip_dr" target="_blank" data-en="@ibrahim_vip_dr" data-ar="@ibrahim_vip_dr">@ibrahim_vip_dr</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h4 data-en="Instagram" data-ar="انستغرام">Instagram</h4>
+                                <p><a href="https://instagram.com/ibrahimzidan.luxury" target="_blank" data-en="@ibrahimzidan.luxury" data-ar="@ibrahimzidan.luxury">@ibrahimzidan.luxury</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language Toggle -->
+    <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle Language" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <i class="fas fa-globe"></i>
+        <span class="lang-text">العربية</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="driver-script.js"></script>
+    <script>
+        // Array to track used review sentences
+        let usedReviewSentences = [];
+        
+        // Function to add review card to editor
+        function addReviewText(text, type = 'neutral') {
+            const reviewEditor = document.getElementById('reviewText');
+            
+            // Check if this sentence has already been used
+            if (usedReviewSentences.includes(text)) {
+                alert('هذه الجملة تم استخدامها من قبل ولا يمكن استخدامها مرة أخرى');
+                return;
+            }
+            
+            if (reviewEditor) {
+                // Add text to used sentences array
+                usedReviewSentences.push(text);
+                
+                // Find and strike through the button that was clicked
+                const suggestionButtons = document.querySelectorAll('.suggestion-btn');
+                suggestionButtons.forEach(button => {
+                    if (button.getAttribute('data-ar') === text || button.textContent.includes(text)) {
+                        button.style.textDecoration = 'line-through';
+                        button.style.opacity = '0.5';
+                        button.style.pointerEvents = 'none';
+                        button.disabled = true;
+                    }
+                });
+                
+                // Create a new card element
+                const card = document.createElement('span');
+                card.className = `review-card ${type}`;
+                card.textContent = text;
+                
+                // Add remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-btn';
+                removeBtn.innerHTML = '×';
+                removeBtn.onclick = function(e) {
+                    e.preventDefault();
+                    
+                    // Remove from used sentences array when card is removed
+                    const index = usedReviewSentences.indexOf(text);
+                    if (index > -1) {
+                        usedReviewSentences.splice(index, 1);
+                    }
+                    
+                    // Re-enable the corresponding button
+                    suggestionButtons.forEach(button => {
+                        if (button.getAttribute('data-ar') === text || button.textContent.includes(text)) {
+                            button.style.textDecoration = 'none';
+                            button.style.opacity = '1';
+                            button.style.pointerEvents = 'auto';
+                            button.disabled = false;
+                        }
+                    });
+                    
+                    card.remove();
+                };
+                
+                card.appendChild(removeBtn);
+                
+                // Add the card to the editor
+                reviewEditor.appendChild(card);
+                
+                // Add a space after the card for better UX
+                const space = document.createTextNode(' ');
+                reviewEditor.appendChild(space);
+                
+                // Focus on the editor
+                reviewEditor.focus();
+                
+                // Move cursor to end
+                const range = document.createRange();
+                const selection = window.getSelection();
+                range.selectNodeContents(reviewEditor);
+                range.collapse(false);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        }
+        
+        // Function to get review content (for form submission)
+        function getReviewContent() {
+            const reviewEditor = document.getElementById('reviewText');
+            if (reviewEditor) {
+                // Extract text content from cards and regular text
+                let content = '';
+                const children = reviewEditor.childNodes;
+                
+                for (let i = 0; i < children.length; i++) {
+                    const child = children[i];
+                    if (child.nodeType === Node.TEXT_NODE) {
+                        content += child.textContent;
+                    } else if (child.classList && child.classList.contains('review-card')) {
+                        content += child.textContent.replace('×', '').trim();
+                    }
+                }
+                
+                return content.trim();
+            }
+            return '';
+        }
+    </script>
+</body>
+</html>
