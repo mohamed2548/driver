@@ -46,12 +46,24 @@
   animation: motion 1s linear infinite;
 }
 
-/* truck suspension animation*/
+/* truck suspension animation with speed bump*/
 @keyframes motion {
   0% {
     transform: translateY(0px);
   }
+  25% {
+    transform: translateY(3px);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
   50% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+  75% {
     transform: translateY(3px);
   }
   100% {
@@ -94,7 +106,6 @@
   right: -50%;
   border-radius: 3px;
   animation: roadAnimation 1.4s linear infinite;
-  border-left: 10px solid white;
 }
 
 .road::after {
@@ -106,7 +117,34 @@
   right: -65%;
   border-radius: 3px;
   animation: roadAnimation 1.4s linear infinite;
-  border-left: 4px solid white;
+}
+
+/* Speed Bump */
+.road .speed-bump {
+  position: absolute;
+  width: 15px;
+  height: 6px;
+  background: repeating-linear-gradient(
+    45deg,
+    #FFD700,
+    #FFD700 3px,
+    #282828 3px,
+    #282828 6px
+  );
+  border-radius: 3px;
+  right: -40%;
+  bottom: 0;
+  animation: bumpAnimation 1.4s linear infinite;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bumpAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
 }
 
 @keyframes roadAnimation {
@@ -145,12 +183,32 @@
   }
 }
 
-/* Modern Street Light */
+/* Modern Street Lights */
 .lampPost {
   animation: lampMove 4s linear infinite;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 8px rgba(255, 255, 200, 0.6));
   position: absolute;
   bottom: -5px;
+  width: 80px;
+  height: auto;
+}
+
+.lampPost2 {
+  animation: lampMove2 4s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 200, 0.6));
+  position: absolute;
+  bottom: -5px;
+  width: 80px;
+  height: auto;
+}
+
+.lampPost3 {
+  animation: lampMove3 4s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 200, 0.6));
+  position: absolute;
+  bottom: -5px;
+  width: 80px;
+  height: auto;
 }
 
 @keyframes lampMove {
@@ -159,6 +217,24 @@
   }
   100% {
     right: 110%;
+  }
+}
+
+@keyframes lampMove2 {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 150%;
+  }
+}
+
+@keyframes lampMove3 {
+  0% {
+    right: -130%;
+  }
+  100% {
+    right: 70%;
   }
 }
 

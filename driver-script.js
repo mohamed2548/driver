@@ -22,7 +22,7 @@ function hideLoader() {
             setTimeout(() => {
                 loader.style.display = 'none';
             }, 500);
-        }, 1500); // Show loader for 1.5 seconds
+        }, 3000); // Show loader for 3 seconds
     }
 }
 
