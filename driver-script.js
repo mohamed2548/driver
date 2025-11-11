@@ -8,6 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
     setMinDate();
     initializeScrollAnimations();
+    hideLoader();
+});
+
+// Hide loader after page loads
+function hideLoader() {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+        // Wait a bit to show the animation
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }, 1500); // Show loader for 1.5 seconds
+    }
+}
+
+// Show loader when navigating
+window.addEventListener('beforeunload', function() {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+        loader.style.display = 'flex';
+        loader.classList.remove('hidden');
+    }
 });
 
 // Initialize website
