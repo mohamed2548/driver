@@ -1,3 +1,8 @@
+/* Hide scrollbar globally when loader is active */
+body:has(.loader-container) {
+  overflow: hidden !important;
+}
+
 /* Truck Loader Styles */
 .loader-container {
   position: fixed;
@@ -12,6 +17,18 @@
   z-index: 9999;
   opacity: 1;
   transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+/* Hide scrollbar for webkit browsers */
+.loader-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.loader-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .loader-container.hidden {
@@ -35,7 +52,17 @@
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+/* Hide scrollbar in truckWrapper */
+.truckWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.truckWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* truck upper body */
