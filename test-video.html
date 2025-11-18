@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الفيديو</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            background: #000;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .info {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 اختبار الفيديو</h1>
+    
+    <div class="info">
+        <h3>اختبار WebM:</h3>
+        <video controls autoplay muted loop id="webmVideo">
+            <source src="videos/sign.webm" type="video/webm">
+            المتصفح لا يدعم WebM
+        </video>
+        <p id="webmStatus">جاري التحميل...</p>
+    </div>
+    
+    <div class="info">
+        <h3>اختبار MP4:</h3>
+        <video controls autoplay muted loop id="mp4Video">
+            <source src="videos/sign.mp4" type="video/mp4">
+            المتصفح لا يدعم MP4
+        </video>
+        <p id="mp4Status">جاري التحميل...</p>
+    </div>
+
+    <script>
+        const webmVideo = document.getElementById('webmVideo');
+        const mp4Video = document.getElementById('mp4Video');
+        const webmStatus = document.getElementById('webmStatus');
+        const mp4Status = document.getElementById('mp4Status');
+
+        // Test WebM
+        webmVideo.addEventListener('loadeddata', () => {
+            webmStatus.textContent = '✅ WebM يعمل بنجاح!';
+            webmStatus.style.color = '#4CAF50';
+        });
+        
+        webmVideo.addEventListener('error', (e) => {
+            webmStatus.textContent = '❌ WebM لا يعمل: ' + webmVideo.error.message;
+            webmStatus.style.color = '#f44336';
+            console.error('WebM Error:', webmVideo.error);
+        });
+
+        // Test MP4
+        mp4Video.addEventListener('loadeddata', () => {
+            mp4Status.textContent = '✅ MP4 يعمل بنجاح!';
+            mp4Status.style.color = '#4CAF50';
+        });
+        
+        mp4Video.addEventListener('error', (e) => {
+            mp4Status.textContent = '❌ MP4 لا يعمل: ' + mp4Video.error.message;
+            mp4Status.style.color = '#f44336';
+            console.error('MP4 Error:', mp4Video.error);
+        });
+
+        // Log video info
+        console.log('WebM src:', webmVideo.currentSrc);
+        console.log('MP4 src:', mp4Video.currentSrc);
+    </script>
+</body>
+</html>

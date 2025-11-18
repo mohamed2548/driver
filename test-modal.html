@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Modal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="driver-styles.css">
+    <style>
+        body {
+            padding: 50px;
+            text-align: center;
+        }
+        .test-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .test-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>اختبار نوافذ تسجيل الدخول</h1>
+    <br><br>
+    <button class="test-btn" onclick="openModal('signinModal')">
+        <i class="fas fa-sign-in-alt"></i> فتح نافذة تسجيل الدخول
+    </button>
+    <button class="test-btn" onclick="openModal('signupModal')">
+        <i class="fas fa-user-plus"></i> فتح نافذة إنشاء حساب
+    </button>
+
+    <!-- Sign In Modal -->
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="modal-video-bg">
+                <source src="videos/sign.mp4" type="video/mp4">
+            </video>
+            <div class="modal-video-overlay"></div>
+            
+            <div class="modal-header">
+                <h2>تسجيل الدخول</h2>
+                <span class="modal-close" onclick="closeModal('signinModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="auth-btn signin-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>تسجيل الدخول</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="modal-video-bg">
+                <source src="videos/sign.mp4" type="video/mp4">
+            </video>
+            <div class="modal-video-overlay"></div>
+            
+            <div class="modal-header">
+                <h2>إنشاء حساب</h2>
+                <span class="modal-close" onclick="closeModal('signupModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label>الاسم</label>
+                        <input type="text" required placeholder="أحمد محمد">
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" required placeholder="ahmed@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="auth-btn signup-btn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>إنشاء حساب</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="driver-script.js"></script>
+</body>
+</html>
